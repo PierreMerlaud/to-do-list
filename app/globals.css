@@ -1,20 +1,37 @@
-.mainDiv {
+.header {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.mainDivH1 {
+.headerH1 {
   font-size: 4rem;
   background-image: linear-gradient(45deg, #ff8a00, #e52e71);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.mainDivText {
+.headerText {
   margin-top: 1rem;
   color: #333333;
+}
+
+.newTaskDiv {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+.newTaskInput {
+  background-color: rgb(255, 255, 255);
+}
+
+.newTaskButton {
+  color: #e52e71;
+  font-size: 1.5rem;
 }
 
 /* .background {
