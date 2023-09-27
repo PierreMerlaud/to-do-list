@@ -1,4 +1,4 @@
-import { AddTaskProps } from "@types";
+import { AddTaskProps } from "../types/index";
 import { BsPlusCircleDotted } from "react-icons/bs";
 
 const AddTask = ({ task, setTask, handleCreateTask }: AddTaskProps) => {
