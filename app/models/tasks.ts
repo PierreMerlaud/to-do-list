@@ -1,7 +1,7 @@
 import { Schema, model, models } from "mongoose";
 import { ITask } from "../types/index";
 
-// structure dans la BDD d'une tâche
+// structure dans la BDD d'une tâche (model)
 const taskSchema = new Schema<ITask>({
   task: {
     type: String,
