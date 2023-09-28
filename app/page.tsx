@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import { ITask } from "./types/index";
+import NoTask from "./components/NoTask";
 
 export default function Home() {
   const [task, setTask] = useState("");
@@ -52,7 +53,7 @@ export default function Home() {
         handleCreateTask={handleCreateTask}
       />
       {isLoading ? (
-        <div className="isLoadingTrue">Is loading.</div>
+        <div className="lds-hourglass"></div>
       ) : (
         <>
           <div className="Tasks">
@@ -61,7 +62,7 @@ export default function Home() {
                 <p key={index}>{individualTask.task}</p>
               ))
             ) : (
-              <p>No tasks</p>
+              <NoTask />
             )}
           </div>
         </>
