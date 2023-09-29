@@ -53,10 +53,10 @@ export default function Home() {
         handleCreateTask={handleCreateTask}
       />
       {isLoading ? (
-        <div className="lds-hourglass"></div>
+        <div className="spinner"></div>
       ) : (
         <>
-          <div className="Tasks">
+          <div className="tasks">
             {allTasks.length > 0 ? (
               allTasks.map((individualTask: ITask, index: number) => (
                 <p key={index}>{individualTask.task}</p>

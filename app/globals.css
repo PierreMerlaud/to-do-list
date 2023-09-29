@@ -7,7 +7,7 @@
 
 .headerH1 {
   font-size: 4rem;
-  background-image: linear-gradient(45deg, #ff8a00, #e52e71);
+  background-image: linear-gradient(45deg, #ff4242, #30ff83);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -56,15 +56,32 @@
   padding-right: 0.5rem;
 }
 
+/* ========== MEDIA QUERIES (SMALL DEVICES)===========*/
+@media screen and (max-width: 600px) {
+  .headerH1 {
+    font-size: 2rem;
+  }
+
+  .newTaskDiv {
+    justify-content: center;
+  }
+
+  .tasks {
+    text-align: center;
+  }
+}
+
 /*SPINNER*/
 
-.lds-hourglass {
-  display: inline-block;
+.spinner {
+  /* display: inline-block; */
+  margin: auto;
+  margin-top: 5rem;
   position: relative;
   width: 80px;
   height: 80px;
 }
-.lds-hourglass:after {
+.spinner:after {
   content: " ";
   display: block;
   border-radius: 50%;
