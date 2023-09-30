@@ -11,7 +11,8 @@
 ### Objectifs
 
 - découvrir TypeScript.
-- BDD avec MongoDB
+- BDD avec MongoDB.
+- héberger le projet.
 
 ### Stack
 
