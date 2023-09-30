@@ -1,5 +1,5 @@
-import Task from "../../../models/tasks";
-import { connectToDB } from "../../../utils/database";
+import Task from "@/app/models/tasks";
+import { connectToDB } from "@/app/utils/database";
 
 import { NextResponse } from "next/server";
 
