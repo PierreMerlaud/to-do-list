@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import { ITask } from "./types/index";
 import NoTask from "./components/NoTask";
+import Task from "./components/Task";
+import Loading from "./components/Loading";
 
 export default function Home() {
   const [task, setTask] = useState("");
@@ -40,6 +42,10 @@ export default function Home() {
     }
   };
 
+  const handleCompleteTask = async () => {};
+
+  const handleDeleteTask = async () => {};
+
   useEffect(() => {
     fetchTasks();
   }, []);
@@ -53,13 +59,18 @@ export default function Home() {
         handleCreateTask={handleCreateTask}
       />
       {isLoading ? (
-        <div className="spinner"></div>
+        <Loading />
       ) : (
         <>
           <div className="tasks">
             {allTasks.length > 0 ? (
               allTasks.map((individualTask: ITask, index: number) => (
-                <p key={index}>{individualTask.task}</p>
+                <Task
+                  key={individualTask._id}
+                  individualTask={individualTask}
+                  handleCompleteTask={handleCompleteTask}
+                  handleDeleteTask={handleDeleteTask}
+                />
               ))
             ) : (
               <NoTask />

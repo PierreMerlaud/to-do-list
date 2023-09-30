@@ -56,6 +56,37 @@
   padding-right: 0.5rem;
 }
 
+.individualTaskDiv {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.individualTaskDoneText {
+  text-decoration: line-through;
+}
+
+.individualTaskToDoText {
+}
+
+.completedButtonsDiv {
+  display: flex;
+}
+
+.disabledButton {
+  margin-left: 1rem;
+}
+
+.enabledButton {
+  margin-left: 1rem;
+  color: #2affa6fc;
+}
+
+.deleteTaskButton {
+  margin-left: 1rem;
+  color: red;
+}
 /* ========== MEDIA QUERIES (SMALL DEVICES)===========*/
 @media screen and (max-width: 600px) {
   .headerH1 {
