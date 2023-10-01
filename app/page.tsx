@@ -42,7 +42,20 @@ export default function Home() {
     }
   };
 
-  const handleCompleteTask = async () => {};
+  const handleCompleteTask = async (id: string) => {
+    try {
+      const response = await fetch(`/api/task/complete/${id}`, {
+        method: "PATCH",
+      });
+      if (response.ok) {
+        await fetchTasks();
+      } else {
+        console.log("Error completing task");
+      }
+    } catch (error) {
+      console.log("Error completing task:", error);
+    }
+  };
 
   const handleDeleteTask = async (id: string) => {
     try {
