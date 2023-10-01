@@ -5,13 +5,14 @@
 
 ### Présentation du projet
 
-- Premier projet Typerscript en solo.
+- Premier projet TyperScript en solo.
 - faire une to do list.
 
 ### Objectifs
 
 - découvrir TypeScript.
-- BDD avec MongoDB
+- BDD avec MongoDB.
+- héberger le projet.
 
 ### Stack
 
