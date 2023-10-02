@@ -12,14 +12,14 @@ body {
 
 .headerH1 {
   font-size: 4rem;
-  background-image: linear-gradient(to left, #ff3c3c, #3aff9d);
+  background-image: linear-gradient(to left, #dd6990, #54dbd2);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .headerText {
   margin-top: 1rem;
-  color: #333333;
+  color: #000000;
 }
 
 .newTaskDiv {
@@ -33,25 +33,30 @@ body {
 .newTaskInput {
   height: 2rem;
   font-family: "Lucida Console", "Courier New", monospace;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   margin-left: 1rem;
-  border: 0.1rem solid #17aeff;
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+}
+
+::placeholder {
+  padding-left: 0.5rem;
 }
 
 .newTaskButton {
-  color: #17aeff;
+  color: #000000;
   font-size: 1.5rem;
   margin-left: 0.5rem;
 }
 
 .newTaskButton:hover {
   color: #ffffff;
-  background-color: #17aeff;
+  background-color: #000000;
   border-radius: 1rem;
 }
 
 .isLoadingTrue {
-  color: #3aff9d;
+  color: #54dbd2;
 }
 
 .tasks {
@@ -68,7 +73,7 @@ body {
 }
 
 .warningButton {
-  color: #ff3c3c;
+  color: #f5749f;
   font-size: 1.5rem;
   padding-right: 0.5rem;
 }
@@ -82,7 +87,7 @@ body {
 }
 
 .individualTaskDoneDiv {
-  background-color: #c5ffe2;
+  background-color: #a7eee9;
   border-radius: 1rem;
   width: 100%;
 }
@@ -97,7 +102,7 @@ body {
 }
 
 .individualTaskToDoDiv {
-  background-color: #ffd5d5;
+  background-color: #ffbdd3;
   border-radius: 1rem;
   width: 100%;
 }
@@ -117,14 +122,16 @@ body {
 }
 
 .disabledButton {
+  font-size: 1.3rem;
   margin-left: 1rem;
   padding: 0.5rem;
   color: #707070;
 }
 
 .enabledButton {
+  font-size: 1.3rem;
   margin-left: 1rem;
-  color: #3aff9d;
+  color: #3bdfd4;
   padding: 0.5rem;
   border: 0.1rem solid transparent;
   background-color: transparent;
@@ -132,22 +139,23 @@ body {
 
 .enabledButton:hover {
   color: #ffffff;
-  background-color: #b5ffda;
-  border: 0.1rem solid #3aff9d;
+  background-color: #a7eee9;
+  border: 0.1rem solid #54dbd2;
   border-radius: 50%;
 }
 
 .deleteTaskButton {
+  font-size: 1.3rem;
   margin-left: 1rem;
-  color: #ff3c3c;
+  color: #e96591;
   padding: 0.5rem;
   border: 0.1rem solid transparent;
 }
 
 .deleteTaskButton:hover {
   color: #ffffff;
-  background-color: #ffc0c0;
-  border: 0.1rem solid #ff3c3c;
+  background-color: #ffbdd3;
+  border: 0.1rem solid #e96591;
   border-radius: 50%;
 }
 
@@ -186,6 +194,7 @@ svg {
   .disabledButton,
   .deleteTaskButton {
     margin-left: 0rem;
+    font-size: 1rem;
   }
 }
 
@@ -207,8 +216,8 @@ svg {
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid #17ff2e;
-  border-color: #17ff2e transparent #17ff2e transparent;
+  border: 32px solid #54dbd2;
+  border-color: #54dbd2 transparent #dd6990 transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 @keyframes lds-hourglass {

@@ -23,7 +23,12 @@ export default function Home() {
       if (response.ok) {
         setTask("");
         fetchTasks();
-        toast("Tâche ajoutée avec succès !");
+        toast("Tâche ajoutée avec succès !", {
+          style: {
+            border: "0.1rem solid #000000",
+            color: "#000000",
+          },
+        });
       } else {
         console.log("error");
       }
@@ -51,7 +56,12 @@ export default function Home() {
       });
       if (response.ok) {
         await fetchTasks();
-        toast("Tâche effectuée. Bravo !");
+        toast("Tâche effectuée. Bravo !", {
+          style: {
+            border: "0.1rem solid #46c2ba",
+            color: "#46c2ba",
+          },
+        });
       } else {
         console.log("Error completing task");
       }
@@ -69,7 +79,12 @@ export default function Home() {
         setAllTasks((prevTasks) =>
           prevTasks.filter((task: ITask) => task._id !== id)
         );
-        toast("Tâche supprimée avec succès !");
+        toast("Tâche supprimée avec succès !", {
+          style: {
+            border: "0.1rem solid #dd6990",
+            color: "#dd6990",
+          },
+        });
       } else {
         console.log("error");
       }
@@ -84,8 +99,10 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <Toaster />
+
+      <Header />
+
       <AddTask
         task={task}
         setTask={setTask}
