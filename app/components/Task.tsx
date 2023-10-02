@@ -10,12 +10,17 @@ const Task = ({
   handleDeleteTask,
 }: TasksProps) => {
   return (
-    <div className="individualTaskDiv">
+    <div className="individualTaskMainDiv">
       {individualTask.completed ? (
-        <p className="individualTaskDoneText">{individualTask.task}</p>
+        <div className="individualTaskDoneDiv">
+          <p className="individualTaskDoneText">{individualTask.task}</p>
+        </div>
       ) : (
-        <p className="individualTaskToDoText">{individualTask.task}</p>
+        <div className="individualTaskToDoDiv">
+          <p className="individualTaskToDoText">{individualTask.task}</p>
+        </div>
       )}
+      <div className="arrow arrow-right"></div>
       <div className="completedButtonsDiv">
         {individualTask.completed ? (
           <MdDoneOutline className="disabledButton" />

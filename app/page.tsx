@@ -6,6 +6,7 @@ import { ITask } from "./types/index";
 import NoTask from "./components/NoTask";
 import Task from "./components/Task";
 import Loading from "./components/Loading";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const [task, setTask] = useState("");
@@ -22,6 +23,7 @@ export default function Home() {
       if (response.ok) {
         setTask("");
         fetchTasks();
+        toast("Tâche ajoutée avec succès !");
       } else {
         console.log("error");
       }
@@ -49,6 +51,7 @@ export default function Home() {
       });
       if (response.ok) {
         await fetchTasks();
+        toast("Tâche effectuée. Bravo !");
       } else {
         console.log("Error completing task");
       }
@@ -66,6 +69,7 @@ export default function Home() {
         setAllTasks((prevTasks) =>
           prevTasks.filter((task: ITask) => task._id !== id)
         );
+        toast("Tâche supprimée avec succès !");
       } else {
         console.log("error");
       }
@@ -81,6 +85,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Toaster />
       <AddTask
         task={task}
         setTask={setTask}

@@ -1,3 +1,8 @@
+body {
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: #e9f6fc;
+}
+
 .header {
   padding: 2rem;
   display: flex;
@@ -7,7 +12,7 @@
 
 .headerH1 {
   font-size: 4rem;
-  background-image: linear-gradient(45deg, #ff4242, #30ff83);
+  background-image: linear-gradient(to left, #ff3c3c, #3aff9d);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -18,31 +23,43 @@
 }
 
 .newTaskDiv {
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   display: flex;
+  align-items: center;
 }
 
 .newTaskInput {
+  height: 2rem;
+  font-family: "Lucida Console", "Courier New", monospace;
   background-color: rgb(255, 255, 255);
+  margin-left: 1rem;
+  border: 0.1rem solid #17aeff;
 }
 
 .newTaskButton {
-  color: #20b1ff;
+  color: #17aeff;
   font-size: 1.5rem;
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.newTaskButton:hover {
+  color: #ffffff;
+  background-color: #17aeff;
+  border-radius: 1rem;
 }
 
 .isLoadingTrue {
-  color: rgb(44, 255, 82);
+  color: #3aff9d;
 }
 
 .tasks {
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  margin: 4rem;
+  border-radius: 1rem;
 }
 
 .noTasks {
@@ -56,37 +73,88 @@
   padding-right: 0.5rem;
 }
 
-.individualTaskDiv {
+.individualTaskMainDiv {
   margin-bottom: 0.5rem;
+  padding: 0rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.individualTaskDoneDiv {
+  background-color: #c5ffe2;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.individualTaskDoneText,
+.individualTaskToDoText {
+  padding: 0rem 1rem;
 }
 
 .individualTaskDoneText {
   text-decoration: line-through;
 }
 
-.individualTaskToDoText {
+.individualTaskToDoDiv {
+  background-color: #ffd5d5;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.arrow {
+  width: 1rem;
+  height: 1rem;
+  border: 0.1rem solid #32557f;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(320deg);
 }
 
 .completedButtonsDiv {
   display: flex;
+  padding: 1rem 0rem 1rem 1rem;
 }
 
 .disabledButton {
   margin-left: 1rem;
+  padding: 0.5rem;
+  color: #707070;
 }
 
 .enabledButton {
   margin-left: 1rem;
-  color: #2affa6fc;
+  color: #3aff9d;
+  padding: 0.5rem;
+  border: 0.1rem solid transparent;
+  background-color: transparent;
+}
+
+.enabledButton:hover {
+  color: #ffffff;
+  background-color: #b5ffda;
+  border: 0.1rem solid #3aff9d;
+  border-radius: 50%;
 }
 
 .deleteTaskButton {
   margin-left: 1rem;
-  color: red;
+  color: #ff3c3c;
+  padding: 0.5rem;
+  border: 0.1rem solid transparent;
 }
+
+.deleteTaskButton:hover {
+  color: #ffffff;
+  background-color: #ffc0c0;
+  border: 0.1rem solid #ff3c3c;
+  border-radius: 50%;
+}
+
+svg {
+  /* padding: 0.5rem; */
+}
+
 /* ========== MEDIA QUERIES (SMALL DEVICES)===========*/
 @media screen and (max-width: 600px) {
   .headerH1 {
@@ -95,10 +163,29 @@
 
   .newTaskDiv {
     justify-content: center;
+    padding-top: 2rem;
   }
 
   .tasks {
     text-align: center;
+    margin: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .individualTaskMainDiv {
+    padding: 0rem 0.2rem;
+    margin-bottom: 0rem;
+  }
+
+  .individualTaskDoneText,
+  .individualTaskToDoText {
+    padding: 0rem 0.1rem;
+  }
+
+  .enabledButton,
+  .disabledButton,
+  .deleteTaskButton {
+    margin-left: 0rem;
   }
 }
 

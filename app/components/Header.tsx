@@ -2,10 +2,8 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <h1 className="headerH1">To-do-list</h1>
-        <p className="headerText">
-          Une to-do-list c&apos;est vraiment super hihi !
-        </p>
+        <h1 className="headerH1">TO-DO-LIST</h1>
+        <p className="headerText">Complétez ici votre to-do-list !</p>
       </header>
     </>
   );
