@@ -40,7 +40,7 @@ export default function Home() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("/api/task/all");
+      const response = await fetch(`/api/task/all?timestamp=${Date.now()}`);
       const data = await response.json();
       setAllTasks(data);
       setIsLoading(false);
